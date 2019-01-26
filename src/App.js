@@ -12,7 +12,6 @@ class App extends Component {
         <header>
           <Link to='/'>Landing </Link>
           <Link to='/library'> Library </Link>
-          <Link to='/album'> Album</Link>
           <h1>Bloc Jams</h1>
         </header>
         <main>
