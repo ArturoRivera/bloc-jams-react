@@ -12,7 +12,7 @@ class App extends Component {
         <header>
           <Link to='/'>Landing </Link>
           <Link to='/library'> Library </Link>
-          <h1>Bloc Jams</h1>
+          <h1>Spotify</h1>
         </header>
         <main>
           <Route exact path="/" component={Landing} />

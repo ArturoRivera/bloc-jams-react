@@ -44,6 +44,11 @@ class Album extends Component {
       this.play();
     }
   }
+
+  mouseEnter(index){
+    console.log("Henlo Stnky Gucci");
+  }
+
   render(){
     return(
 
@@ -66,10 +71,13 @@ class Album extends Component {
            {
              this.state.album.songs.map((song, index) => {
               return(
+
                 <tr className="song" key={index} onClick={() => this.handleSongClick(song)}>
-                <td>{index + 1})</td>
-                <td>Title: {song.title}</td>
-                <td>Duration: {song.duration}</td>
+                <td onMouseEnter={() => this.mouseEnter()}>{index + 1}</td>
+                <td><span className="icon ion-md-play-circle"></span></td>
+                <td><span className="icon ion-md-pause"></span></td>
+                <td>{song.title}</td>
+                <td>{song.duration}</td>
                 </tr>
               )
 
