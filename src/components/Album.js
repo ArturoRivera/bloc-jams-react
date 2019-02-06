@@ -45,8 +45,20 @@ class Album extends Component {
     }
   }
 
-  mouseEnter(index){
-    console.log("Henlo Stnky Gucci");
+  mouseEnter(song) {
+    this.setState({
+      onHover: song
+    })
+  }
+
+  getNumberDisplay(index, song) {
+    if (this.state.isPlaying && this.state.currentSong === song) {
+      return <span className="icon ion-md-pause"></span>
+    }
+    if (this.state.onHover === song) {
+      return <span className="icon ion-md-play-circle"></span>
+    }
+    return index + 1;
   }
 
   render(){
@@ -71,11 +83,12 @@ class Album extends Component {
            {
              this.state.album.songs.map((song, index) => {
               return(
-
                 <tr className="song" key={index} onClick={() => this.handleSongClick(song)}>
-                <td onMouseEnter={() => this.mouseEnter()}>{index + 1}</td>
-                <td><span className="icon ion-md-play-circle"></span></td>
-                <td><span className="icon ion-md-pause"></span></td>
+                <td
+                  onMouseEnter={() => this.mouseEnter(song)}
+                >
+                  {this.getNumberDisplay(index, song)}
+                </td>
                 <td>{song.title}</td>
                 <td>{song.duration}</td>
                 </tr>
