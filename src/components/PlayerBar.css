@@ -1,0 +1,46 @@
+div.icon {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  padding: 20px;
+}
+div.currentVolume {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  padding: 5px;
+}
+div.mdl-slider__container {
+  display: inline-block;
+  height: 20px;
+  width: 300px;
+  padding: 10px;
+}
+div.current-time{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  padding: 20px;
+}
+
+div.total-time {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  padding: 20px;
+}
+
+#buttons {
+  padding: 20px;
+}
+
+#song-list {
+  padding: 20px;
+}
+
+#album-info {
+  padding: 10px;
+}
+h1.mdl-layout-title{
+  padding-left: 20px;
+}
